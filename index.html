@@ -114,6 +114,35 @@
   .fantasy-list span{font-weight:700;padding:10px 22px;border-radius:12px;background:var(--card);
     border:1px solid var(--border);font-size:14.5px;letter-spacing:.02em;color:var(--ink);}
 
+  /* Pricing */
+  section.pricing{padding:80px 22px;}
+  .pricing .wrap{max-width:920px;margin:0 auto;}
+  .pricing h2{font-size:36px;letter-spacing:-.02em;margin:0 0 8px;font-weight:800;text-align:center;}
+  .pricing .subtitle{color:var(--muted);text-align:center;margin:0 0 40px;font-size:16px;}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  @media(max-width:720px){.plans{grid-template-columns:1fr;}}
+  .plan{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 28px;
+    box-shadow:0 4px 20px -12px rgba(80,40,10,.12);position:relative;}
+  .plan.pro{border-color:var(--orange);box-shadow:0 12px 40px -18px var(--ring);}
+  .plan .plan-tag{position:absolute;top:-12px;right:26px;background:var(--orange);color:#fff;
+    font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    padding:5px 12px;border-radius:999px;}
+  .plan h3{font-size:22px;letter-spacing:-.01em;margin:0 0 4px;font-weight:800;}
+  .plan .price{display:flex;align-items:baseline;gap:6px;margin:14px 0 22px;}
+  .plan .price .amt{font-size:44px;font-weight:800;letter-spacing:-.02em;color:var(--ink);}
+  .plan .price .per{color:var(--muted);font-size:14px;font-weight:600;}
+  .plan .price-note{color:var(--muted);font-size:12.5px;margin:-14px 0 22px;}
+  .plan ul{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px;}
+  .plan li{display:flex;gap:10px;color:var(--ink);font-size:14.5px;line-height:1.45;}
+  .plan li::before{content:"✓";color:var(--orange);font-weight:800;font-size:14px;margin-top:2px;}
+  .plan li.dim{color:var(--muted);}
+  .plan li.dim::before{content:"—";color:var(--muted);}
+  .plan .plan-cta{display:inline-block;width:100%;text-align:center;padding:13px 20px;border-radius:12px;
+    font-weight:700;font-size:14.5px;text-decoration:none;transition:transform .18s;}
+  .plan.free .plan-cta{background:var(--bg2);color:var(--ink);border:1px solid var(--border);}
+  .plan.pro .plan-cta{background:var(--orange);color:#fff;box-shadow:0 8px 22px -8px var(--ring);}
+  .plan .plan-cta:hover{transform:translateY(-2px);}
+
   /* CTA / download section */
   section.download{padding:100px 22px;text-align:center;}
   .download .wrap{max-width:720px;margin:0 auto;}
@@ -137,9 +166,9 @@
   <a class="brand" href="/"><img src="appicon.png" alt=""> Sports Alerts</a>
   <div class="nav-links">
     <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
     <a href="#integrations">Fantasy Sync</a>
     <a href="/support.html">Support</a>
-    <a href="/privacy.html">Privacy</a>
   </div>
   <a class="btn" href="#download">Get the app</a>
 </nav>
@@ -259,10 +288,59 @@
   </div>
 </section>
 
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <p class="subtitle">Everything you need is free. Fantasy roster auto-sync is $0.99/month.</p>
+    <div class="plans">
+      <div class="plan free">
+        <h3>Free</h3>
+        <div class="price">
+          <span class="amt">$0</span>
+          <span class="per">forever</span>
+        </div>
+        <ul>
+          <li>Follow any pro baseball player</li>
+          <li>Follow any team</li>
+          <li>Home run, hit, stolen base, K, at-bat outcome alerts</li>
+          <li>Lineup posted / not-in-lineup alerts</li>
+          <li>Injury and callup alerts for followed players</li>
+          <li>Live scores, live at-bat view, box scores</li>
+          <li>Notification history + custom templates</li>
+          <li>Manual player search across MLB + prospects</li>
+          <li class="dim">Fantasy roster auto-sync</li>
+          <li class="dim">League-wide leaderboard sync</li>
+        </ul>
+        <a href="#download" class="plan-cta">Install free</a>
+      </div>
+      <div class="plan pro">
+        <div class="plan-tag">Pro</div>
+        <h3>Fantasy Sync</h3>
+        <div class="price">
+          <span class="amt">$0.99</span>
+          <span class="per">/ month</span>
+        </div>
+        <p class="price-note">Cancel anytime. First month free trial.</p>
+        <ul>
+          <li><strong>Everything in Free</strong></li>
+          <li>Auto-sync Yahoo Fantasy rosters</li>
+          <li>Auto-sync ESPN Fantasy rosters</li>
+          <li>Auto-sync CBS Sports leagues</li>
+          <li>Import Underdog Fantasy draft picks</li>
+          <li>Alerts show which league each player is on</li>
+          <li>Overnight roster refresh when you drop / add</li>
+          <li>Multi-league support — follow rosters from every league you're in</li>
+        </ul>
+        <a href="#download" class="plan-cta">Start free trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="download" id="download">
   <div class="wrap">
     <h2>Get Sports Alerts.</h2>
-    <p>Free to install. Fantasy roster sync is available as an optional $0.99/month subscription. Everything else — following players, live scores, alerts — stays free.</p>
+    <p>Free to install. Fantasy roster auto-sync unlocks with the Pro plan — a $0.99/month subscription with a free first month.</p>
     <a href="https://apps.apple.com/app/id6759210501" class="apple-badge">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
       <div>
