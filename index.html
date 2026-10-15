@@ -160,6 +160,21 @@
   footer .disclaimer{max-width:680px;margin:0 auto 18px;font-size:12.5px;line-height:1.55;opacity:.85;}
   footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:14px 0;}
 </style>
+<style>
+/* Greyed Google Play badge: Android is coming soon (2026-10-15) */
+.gplay-wrap{position:relative;display:inline-flex;vertical-align:middle;outline:none;cursor:default}
+.gplay{display:inline-flex;align-items:center;gap:9px;padding:9px 18px 9px 14px;border-radius:12px;background:#000;color:#fff;
+  border:1px solid #000;line-height:1.05;opacity:.35;filter:grayscale(1);user-select:none;text-align:left;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.gplay svg{width:20px;height:22px;flex:none}
+.gplay span{display:flex;flex-direction:column;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.gplay small{font-size:9.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.gplay-wrap::after{content:"Android: coming soon";position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#1e293b;color:#e2e8f0;font:600 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;letter-spacing:.05em;
+  text-transform:uppercase;padding:6px 10px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:5}
+.gplay-wrap:hover::after,.gplay-wrap:focus::after{opacity:1}
+@media (prefers-color-scheme:dark){.gplay{border-color:#555}}
+</style>
 </head>
 <body>
 <nav>
@@ -183,6 +198,7 @@
       <p class="lead">Home runs, big hits, stolen bases, strikeouts, lineup posts, callups, injuries. Sports Alerts turns pro baseball into a personal push feed built around your fantasy roster.</p>
       <div class="hero-cta">
         <a class="btn big" href="#download">Get on the App Store</a>
+        <span class="gplay-wrap" tabindex="0" title="Android: coming soon"><span class="gplay" aria-label="Google Play: Android coming soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Get it on</small>Google Play</span></span></span>
         <a class="btn ghost big" href="#features">See features</a>
       </div>
     </div>
@@ -341,13 +357,13 @@
   <div class="wrap">
     <h2>Get Sports Alerts.</h2>
     <p>Free to install. Fantasy roster auto-sync unlocks with the Pro plan — a $0.99/month subscription with a free first month.</p>
-    <a href="https://apps.apple.com/app/id6759210501" class="apple-badge">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;"><a href="https://apps.apple.com/app/id6759210501" class="apple-badge">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
       <div>
         <div class="apple-lil">Download on the</div>
         <div class="apple-big">App Store</div>
       </div>
-    </a>
+    </a><span class="gplay-wrap" tabindex="0" title="Android: coming soon"><span class="gplay" aria-label="Google Play: Android coming soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Get it on</small>Google Play</span></span></span></div>
   </div>
 </section>
 
